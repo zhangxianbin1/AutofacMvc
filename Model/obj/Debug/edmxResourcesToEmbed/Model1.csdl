@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="test1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ces">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="pid" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="table1">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="DEPARTMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PRICE" Type="Int32" />
+    <Property Name="NUM" Type="Int32" />
+    <Property Name="TOTALPRICE" Type="Int32" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="ISVALID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="b">
+    <Key>
+      <PropertyRef Name="time" />
+    </Key>
+    <Property Name="id" Type="Int32" />
+    <Property Name="country_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="time" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="package">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="book_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="v_view">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="USERID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="test1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ces" EntityType="Self.ces" />
+    <EntitySet Name="table1" EntityType="Self.table1" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <EntitySet Name="b" EntityType="Self.b" />
+    <EntitySet Name="package" EntityType="Self.package" />
+    <EntitySet Name="v_view" EntityType="Self.v_view" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,14 @@
+E:\gitproject\autofacMvc\IService\bin\Debug\IService.dll
+E:\gitproject\autofacMvc\IService\bin\Debug\IService.pdb
+E:\gitproject\autofacMvc\IService\obj\Debug\IService.csprojAssemblyReference.cache
+E:\gitproject\autofacMvc\IService\obj\Debug\IService.csproj.CoreCompileInputs.cache
+E:\gitproject\autofacMvc\IService\obj\Debug\IService.dll
+E:\gitproject\autofacMvc\IService\obj\Debug\IService.pdb
+E:\gitproject\autofacMvc\IService\bin\Debug\Model.dll
+E:\gitproject\autofacMvc\IService\bin\Debug\EntityFramework.dll
+E:\gitproject\autofacMvc\IService\bin\Debug\Model.pdb
+E:\gitproject\autofacMvc\IService\bin\Debug\Model.dll.config
+E:\gitproject\autofacMvc\IService\bin\Debug\EntityFramework.xml
+E:\gitproject\autofacMvc\IService\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\gitproject\autofacMvc\IService\obj\Debug\IService.csproj.CopyComplete
+E:\gitproject\autofacMvc\IService\bin\Debug\IService.dll.config

@@ -1,0 +1,15 @@
+E:\gitproject\autofacMvc\Model\bin\Debug\Model.dll.config
+E:\gitproject\autofacMvc\Model\bin\Debug\Model.dll
+E:\gitproject\autofacMvc\Model\bin\Debug\Model.pdb
+E:\gitproject\autofacMvc\Model\bin\Debug\EntityFramework.dll
+E:\gitproject\autofacMvc\Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\gitproject\autofacMvc\Model\bin\Debug\MySql.Data.dll
+E:\gitproject\autofacMvc\Model\bin\Debug\MySql.Data.Entity.EF6.dll
+E:\gitproject\autofacMvc\Model\bin\Debug\EntityFramework.xml
+E:\gitproject\autofacMvc\Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\gitproject\autofacMvc\Model\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\gitproject\autofacMvc\Model\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\gitproject\autofacMvc\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+E:\gitproject\autofacMvc\Model\obj\Debug\Model.csproj.CopyComplete
+E:\gitproject\autofacMvc\Model\obj\Debug\Model.dll
+E:\gitproject\autofacMvc\Model\obj\Debug\Model.pdb

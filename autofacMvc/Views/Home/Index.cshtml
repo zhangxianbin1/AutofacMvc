@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<h2>用户列表</h2>
+
+@* 简单展示用户 *@
+
+@model IEnumerable<Model.user>
+
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.USERID</td>
+            <td>@item.PASSWORD</td>
+            <td>@item.ID</td>
+        </tr>
+    }
+</table>

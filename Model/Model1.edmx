@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="test1Model.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“def.test1.a”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="a">
+          <Property Name="id" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="255" />
+          <Property Name="country_name" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“def.test1.aaa”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="aaa">
+          <Property Name="year" Type="varchar" MaxLength="255" />
+          <Property Name="month" Type="varchar" MaxLength="255" />
+          <Property Name="amount" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“def.test1.b”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="b">
+          <Key>
+            <PropertyRef Name="time" />
+          </Key>
+          <Property Name="id" Type="int" />
+          <Property Name="country_name" Type="varchar" MaxLength="255" />
+          <Property Name="time" Type="timestamp" Precision="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ces">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="pid" Type="int" />
+          <Property Name="name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“def.test1.course”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="course">
+          <Property Name="id" Type="int" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="book_name" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“def.test1.package”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="package">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="book_name" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="table1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NAME" Type="varchar" MaxLength="255" />
+          <Property Name="DEPARTMENT" Type="varchar" MaxLength="255" />
+          <Property Name="PRICE" Type="int" />
+          <Property Name="NUM" Type="int" />
+          <Property Name="TOTALPRICE" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“def.test1.tablename”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="tablename">
+          <Property Name="num" Type="int" />
+          <Property Name="city_id" Type="int" />
+          <Property Name="city_name" Type="varchar" MaxLength="255" />
+          <Property Name="typename" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“def.test1.team”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="team">
+          <Property Name="name" Type="varchar" MaxLength="255" />
+        </EntityType>-->
+        <!--生成过程中发现错误:
+警告 6013: 表/视图“def.test1.time”未定义主键，并且无法推断有效的主键。已排除了此表/视图。若要使用实体，将需要检查您的架构、添加正确的键并取消对实体的注释。
+        <EntityType Name="time">
+          <Property Name="starttime" Type="datetime" Precision="0" />
+        </EntityType>-->
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="USERID" Type="varchar" MaxLength="255" />
+          <Property Name="PASSWORD" Type="varchar" MaxLength="255" />
+          <Property Name="ISVALID" Type="int" />
+        </EntityType>
+        <!--生成过程中发现错误:
+警告 6002: 表/视图“def.test1.v_view”未定义主键。已推断出该键，并将定义创建为只读的表/视图。-->
+        <EntityType Name="v_view">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="USERID" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="test1ModelStoreContainer">
+          <EntitySet Name="ces" EntityType="Self.ces" Schema="test1" store:Type="Tables" />
+          <EntitySet Name="table1" EntityType="Self.table1" Schema="test1" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="test1" store:Type="Tables" />
+          <EntitySet Name="b" EntityType="Self.b" store:Type="Tables" store:Schema="test1">
+            <DefiningQuery>SELECT
+`b`.`id`, 
+`b`.`country_name`, 
+`b`.`time`
+FROM `b` AS `b`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="package" EntityType="Self.package" store:Type="Tables" store:Schema="test1">
+            <DefiningQuery>SELECT
+`package`.`id`, 
+`package`.`user_id`, 
+`package`.`book_name`
+FROM `package` AS `package`</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="v_view" EntityType="Self.v_view" store:Type="Views" store:Schema="test1">
+            <DefiningQuery>SELECT
+`v_view`.`ID`, 
+`v_view`.`USERID`
+FROM `v_view` AS `v_view`</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="test1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ces">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="pid" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="table1">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NAME" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DEPARTMENT" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PRICE" Type="Int32" />
+          <Property Name="NUM" Type="Int32" />
+          <Property Name="TOTALPRICE" Type="Int32" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="USERID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="PASSWORD" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ISVALID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="b">
+          <Key>
+            <PropertyRef Name="time" />
+          </Key>
+          <Property Name="id" Type="Int32" />
+          <Property Name="country_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="time" Type="DateTime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="package">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="book_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="v_view">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="USERID" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="test1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ces" EntityType="Self.ces" />
+          <EntitySet Name="table1" EntityType="Self.table1" />
+          <EntitySet Name="user" EntityType="Self.user" />
+          <EntitySet Name="b" EntityType="Self.b" />
+          <EntitySet Name="package" EntityType="Self.package" />
+          <EntitySet Name="v_view" EntityType="Self.v_view" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="test1ModelStoreContainer" CdmEntityContainer="test1Entities">
+          <EntitySetMapping Name="ces">
+            <EntityTypeMapping TypeName="test1Model.ces">
+              <MappingFragment StoreEntitySet="ces">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="pid" ColumnName="pid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="table1">
+            <EntityTypeMapping TypeName="test1Model.table1">
+              <MappingFragment StoreEntitySet="table1">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="DEPARTMENT" ColumnName="DEPARTMENT" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="NUM" ColumnName="NUM" />
+                <ScalarProperty Name="TOTALPRICE" ColumnName="TOTALPRICE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="test1Model.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+                <ScalarProperty Name="PASSWORD" ColumnName="PASSWORD" />
+                <ScalarProperty Name="ISVALID" ColumnName="ISVALID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="b">
+            <EntityTypeMapping TypeName="test1Model.b">
+              <MappingFragment StoreEntitySet="b">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="country_name" ColumnName="country_name" />
+                <ScalarProperty Name="time" ColumnName="time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="package">
+            <EntityTypeMapping TypeName="test1Model.package">
+              <MappingFragment StoreEntitySet="package">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="book_name" ColumnName="book_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="v_view">
+            <EntityTypeMapping TypeName="test1Model.v_view">
+              <MappingFragment StoreEntitySet="v_view">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="USERID" ColumnName="USERID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
